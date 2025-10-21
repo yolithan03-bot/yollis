@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="style-main.css">
+</head>
+<body>
+  <!-- Fundo com efeito radial -->
+  <div class="bg-overlay"></div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1 id="welcome-msg">Bem-vindo(a)!</h1>
+    <p class="subtitle">Escolhe abaixo o que desejas explorar:</p>
+  </header>
+
+  <!-- Menu de opções -->
+  <nav>
+    <button onclick="window.location.href='CV/cv.html'">📄 Ver Meu CV</button>
+    <button onclick="window.location.href='Galeria/galeria.html'">🎞️ Galeria Multimédia</button>
+    <button onclick="logout()">🔒 Sair</button>
+  </nav>
+
+  <script>
+    const welcomeMsg = document.getElementById('welcome-msg');
+    const user = sessionStorage.getItem('loggedUser');
+    if(user) {
+      welcomeMsg.textContent = `Bem-vindo(a), ${user}!`;
+    } else {
+      welcomeMsg.textContent = "Bem-vindo(a)!";
+    }
+
+    function logout() {
+      sessionStorage.removeItem('loggedUser');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

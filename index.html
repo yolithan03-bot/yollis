@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Purple Ocean</title>
+  <link rel="stylesheet" href="style-login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Bem-vindo(a)</h1>
+
+    <form id="login-form" autocomplete="off">
+      <input type="text" id="username" placeholder="Usuário" required />
+      <input type="password" id="password" placeholder="Senha (qualquer)" />
+      <button type="submit">Entrar</button>
+      <p id="info-msg" style="color:#dcdcdc; margin-top:10px; font-size:0.9rem;">
+        Podes usar qualquer senha — só precisa de um nome de usuário.
+      </p>
+    </form>
+  </div>
+
+  <script>
+    // Login que aceita qualquer senha.
+    // Requer apenas um nome de usuário não vazio.
+    const loginForm = document.getElementById('login-form');
+
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('username').value.trim();
+      // const pass = document.getElementById('password').value; // senha aceita qualquer valor
+
+      if (!user) {
+        // se o utilizador não inserir nome, mostramos alerta simples
+        alert('Por favor escreve um nome de usuário.');
+        return;
+      }
+
+      // Guarda o nome do utilizador na sessão (opcional — útil para mostrar no main)
+      try {
+        sessionStorage.setItem('loggedUser', user);
+      } catch (err) {
+        // silencioso se sessionStorage não estiver disponível
+      }
+
+      // Redireciona para a página principal
+      window.location.href = 'main.html';
+    });
+  </script>
+</body>
+</html>

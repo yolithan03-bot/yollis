@@ -1,0 +1,66 @@
+/* Fundo escuro elegante */
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#1a002b;
+  color:#f3eaff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  position:relative;
+  padding:40px 20px;
+}
+
+.bg-overlay{
+  position:fixed;
+  inset:0;
+  background: radial-gradient(circle at top, rgba(77,0,128,0.3), #1a002b);
+  z-index:-1;
+}
+
+/* Cabeçalho */
+header{
+  text-align:center;
+  margin-bottom:50px;
+}
+header h1{
+  font-size:2.5rem;
+  margin-bottom:10px;
+  text-shadow:0 0 20px #ffb3f0;
+}
+header .subtitle{
+  font-size:1.1rem;
+  color:#dcdcdc;
+  opacity:0.8;
+}
+
+/* Menu de botões */
+nav{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:center;
+  width:100%;
+  max-width:400px;
+}
+
+nav button{
+  width:100%;
+  padding:15px 20px;
+  font-size:1.1rem;
+  border:none;
+  border-radius:12px;
+  font-weight:bold;
+  cursor:pointer;
+  color:#0b0010;
+  background:linear-gradient(135deg,#ffb3f0,#e89cff);
+  box-shadow:0 6px 25px rgba(155,77,255,0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+nav button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px #e89cff;
+}
