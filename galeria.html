@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria Multimédia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+  <button class="back-btn" onclick="window.location.href='main.html'">⬅ Voltar à Página Principal</button>
+  </nav>
+
+  <!-- Fundo cintilante -->
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <h1>✨ Bem-vindo ao Mundo BTS ✨</h1>
+      <p>*BTS** é muito mais do que um simples grupo musical — é um fenômeno que toca corações ao redor do mundo. Formado por **RM, Jin, Suga, J-Hope, Jimin, V e Jungkook**, o grupo nasceu na Coreia do Sul em 2013 e conquistou o planeta com seu talento, carisma e mensagens cheias de significado.
+Cada canção do BTS é um convite para sonhar, acreditar e nunca desistir de si mesmo. Suas letras falam de amor-próprio, juventude, dor e esperança — sentimentos que todos nós compartilhamos. Com coreografias intensas e performances cheias de energia, o BTS transforma palco em emoção pura.
+Mais do que artistas, eles são inspiração. Uniram milhões de fãs, os **ARMYs**, numa só voz, espalhando amor e força por todos os cantos do mundo. O BTS não é apenas música — é um sentimento, uma luz que continua a brilhar no coração de quem acredita que nada é impossível. 💜</p>
+    </section>
+
+    <!-- GALERIA DE FOTOS -->
+    <section class="section">
+      <h2>📸 Galeria BTS</h2>
+      <div class="gallery">
+        <div class="photo"><img src="bts1.jpg" alt="BTS 1"><a href="bts1.jpg" class="download" download>↓</a></div>
+        <div class="photo"><img src="bts2.jpg" alt="BTS 2"><a href="bts2.jpg" class="download" download>↓</a></div>
+        <div class="photo"><img src="bts3.jpg" alt="BTS 3"><a href="bts3.jpg" class="download" download>↓</a></div>
+        <div class="photo"><img src="bts4.jpg" alt="BTS 4"><a href="bts4.jpg" class="download" download>↓</a></div>
+        <div class="photo"><img src="bts5.jpg" alt="BTS 5"><a href="bts5.jpg" class="download" download>↓</a></div>
+      </div>
+    </section>
+
+    <!-- ÁUDIOS -->
+    <section class="section">
+      <h2>🎵 Áudios de BTS</h2>
+      <div class="media-item">
+        <strong>Magic Shop</strong>
+        <audio controls><source src="bts2.mp3" type="audio/mpeg"></audio>
+        <a class="btn" href="bts2.mp3" download>⬇ Baixar</a>
+      </div>
+      <div class="media-item">
+        <strong>Run</strong>
+        <audio controls><source src="bts3.mp3" type="audio/mpeg"></audio>
+        <a class="btn" href="bts3.mp3" download>⬇ Baixar</a>
+      </div>
+      <div class="media-item">
+        <strong>Boy In Luv</strong>
+        <audio controls><source src="bts4.mp3" type="audio/mpeg"></audio>
+        <a class="btn" href="bts4.mp3" download>⬇ Baixar</a>
+      </div>
+       <div class="media-item">
+        <strong>Boy with Luv</strong>
+        <audio controls><source src="bts5.mp3" type="audio/mpeg"></audio>
+        <a class="btn" href="bts5.mp3" download>⬇ Baixar</a>
+      </div>
+    </section>
+
+    <!-- VÍDEOS DO YOUTUBE -->
+    <section class="section">
+      <h2>🎥 Random Videos do YouTube</h2>
+      <div class="random-videos">
+        <iframe src="https://www.youtube.com/embed/gdZLi9oWNZg" title="Dynamite" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/WMweEpGlu_U" title="Butter" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/kTlv5_Bs8aw" title="Boy With Luv" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- VÍDEOS LOCAIS -->
+    <section class="section">
+      <h2>🎥 Vídeos Especiais (meus arquivos)</h2>
+      <div class="random-videos">
+        <video src="bts1.mp4" controls></video>
+        <video src="bts2.mp4" controls></video>
+        <video src="bts3.mp4" controls></video>
+      </div>
+    </section>
+  </div>
+
+  <p>Feito com amor por uma Army💜</p>
+
+  <p>💜💜I PURPLE YOU💜💜</p>
+  <!-- LIGHTBOX -->
+  <div id="lightbox"><img src="" alt=""></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
